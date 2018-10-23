@@ -8,7 +8,7 @@ import Columns from 'grommet/components/Columns'
 
 import ButtonLink from './button-link'
 
-export default ({direction}) => (
+export default ({direction, padding}) => (
   <StaticQuery
     query={graphql`
       query {
@@ -29,7 +29,7 @@ export default ({direction}) => (
       `
     }
     render={data => (
-      <Box style={{flexDirection: direction, flexWrap: "wrap"}} justify="center">
+      <Box style={{flexDirection: direction, flexWrap: "wrap"}} justify="center" padding={padding}>
         { data.allMarkdownRemark.edges.map(({ node }) => (
           <ButtonLink slug={node.fields.slug} title={node.frontmatter.title} />
          ))}

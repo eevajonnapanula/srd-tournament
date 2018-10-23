@@ -4,7 +4,7 @@ module.exports = {
   siteMetadata: {
     ...siteConfig
   },
-  pathPrefix: '/srd',
+  pathPrefix: '/srd-gameday',
   plugins: [
     {
       resolve: `gatsby-source-filesystem`,
@@ -28,7 +28,6 @@ module.exports = {
         trackingId: siteConfig.googleAnalyticsTrackingId
       }
     },
-    `gatsby-plugin-feed`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
