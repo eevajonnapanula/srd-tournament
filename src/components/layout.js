@@ -14,16 +14,38 @@ import '../scss/main.scss'
 import Header from '../components/header'
 import Menu from '../components/menu'
 
-export default ({ children, location }) =>  (
-      <App>
-        <Box pad="medium">
-          <Header />
-          <Columns maxCount={2} responsive={true}>
-            <Menu />
-            <Box>
-              {children}
+export default class Layout extends React.Component {
+   constructor() {
+     super();
+     this._onResponsive = this._onResponsive.bind(this);
+     this.state = {};
+   }
+
+   componentDidMount () {
+     this._responsive = Responsive.start(this._onResponsive);
+   }
+
+   componentWillUnmount() {
+     this._responsive.stop();
+   }
+
+   _onResponsive(small) {
+     this.setState({ small });
+   }
+
+  render() {
+    return (
+          <App inline={true}>
+            <Box pad="medium" size={{width: "full"}}>
+              <Header />
+              <Columns maxCount={2} >
+                <Menu direction={this.state.small ? "row" : "column"} />
+                <Box pad="small" size={{width: "full"}}>
+                  {this.props.children}
+                </Box>
+              </Columns>
             </Box>
-          </Columns>
-        </Box>
-      </App>
-    )
+          </App>
+        )
+  }
+}
