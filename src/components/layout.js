@@ -11,8 +11,9 @@ import Columns from 'grommet/components/Columns';
 import '../scss/main.scss'
 
 // Components
-import Header from '../components/header'
-import Menu from '../components/menu'
+import Header from './header'
+import Menu from './menu'
+import Footer from './footer'
 
 export default class Layout extends React.Component {
    constructor() {
@@ -37,7 +38,7 @@ export default class Layout extends React.Component {
     return (
           <App inline={true}>
             <Box pad="medium" size={{width: "full"}}>
-              <Header />
+              <Header small={this.state.small} />
               <Columns maxCount={2} >
                 <Menu direction={this.state.small ? "row" : "column"} />
                 <Box pad="small" size={{width: "full"}}>
@@ -45,6 +46,7 @@ export default class Layout extends React.Component {
                 </Box>
               </Columns>
             </Box>
+            <Footer />
           </App>
         )
   }
