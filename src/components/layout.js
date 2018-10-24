@@ -37,7 +37,7 @@ export default class Layout extends React.Component {
     return (
           <App inline={true}>
             <Box pad="medium" size={{width: "full"}}>
-              <Header />
+              <Header small={this.state.small} />
               <Columns maxCount={2} >
                 <Menu direction={this.state.small ? "row" : "column"} />
                 <Box pad="small" size={{width: "full"}}>
