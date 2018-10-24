@@ -11,8 +11,9 @@ import Columns from 'grommet/components/Columns';
 import '../scss/main.scss'
 
 // Components
-import Header from '../components/header'
-import Menu from '../components/menu'
+import Header from './header'
+import Menu from './menu'
+import Footer from './footer'
 
 export default class Layout extends React.Component {
    constructor() {
@@ -45,6 +46,7 @@ export default class Layout extends React.Component {
                 </Box>
               </Columns>
             </Box>
+            <Footer />
           </App>
         )
   }
