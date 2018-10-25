@@ -60,7 +60,7 @@ class Login extends React.Component {
             <FormField>
               <PasswordInput onChange={(e) => this.handlePasswordChange(e)} />
             </FormField>
-            <Button label="Kirjaudu" onClick={(e) => this.handleLogin(e) } fill={true}/>
+            <Button label="Kirjaudu" onClick={(e) => this.handleLogin(e) } primary={true} fill={true}/>
           </Form>
         </Box>
     )}

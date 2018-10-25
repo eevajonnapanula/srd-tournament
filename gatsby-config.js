@@ -35,7 +35,7 @@ module.exports = {
         short_name: `SRD`,
         start_url: `/srd-gameday`,
         background_color: `#ffffff`,
-        theme_color: `#663399`,
+        theme_color: `#E13987`,
         display: `minimal-ui`,
       }
     },
