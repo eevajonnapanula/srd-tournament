@@ -33,7 +33,7 @@ module.exports = {
       options: {
         name: `SRD`,
         short_name: `SRD`,
-        start_url: `/`,
+        start_url: `/login`,
         background_color: `#ffffff`,
         theme_color: `#663399`,
         display: `minimal-ui`,
@@ -42,5 +42,9 @@ module.exports = {
     `gatsby-plugin-offline`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-styled-components`,
+    {
+      resolve: `gatsby-plugin-create-client-paths`,
+      options: { prefixes: [`/app/*`] },
+    }
     ]
 }
