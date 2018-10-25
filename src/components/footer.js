@@ -1,8 +1,10 @@
 import React from 'react'
+import { OutboundLink } from 'gatsby-plugin-google-analytics'
+
 import Footer from 'grommet/components/Footer'
 import Box from 'grommet/components/Box'
 import Paragraph from 'grommet/components/Paragraph'
-import Menu from 'grommet/components/Menu'
+import Label from 'grommet/components/Label'
 import Anchor from 'grommet/components/Anchor'
 import Diamond from 'grommet/components/icons/base/Diamond'
 
@@ -13,9 +15,12 @@ export default () => (
       pad={{"between": "medium"}}
       responsive={false}
       >
-      <Paragraph margin='none'>
-        <Anchor href='https://github.com/eevajonnapanula' primary={true} icon={<Diamond />} >Eevis</Anchor>
-      </Paragraph>
+        <OutboundLink href='https://github.com/eevajonnapanula' style={{textDecoration: 'none'}} >
+          <Box direction="row" justify="center" align="center" pad={{between: "small"}}>
+            <Diamond/>
+            <Label>Eevis</Label>
+          </Box>
+        </OutboundLink>
     </Box>
   </Footer>
 )

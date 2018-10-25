@@ -7,11 +7,11 @@ import logo from '../assets/SRD-transparent.png'
 
 
 export default ({small}) => (
-      <Header style={{paddingBottom: '5rem', justifyContent: small ? 'center' : 'flex-start', paddingTop: '2rem'}}>
+      <Header style={{paddingBottom: '5rem', justifyContent: small ? 'center' : 'space-evenly', paddingTop: '2rem'}}>
         <Image src={logo}
           size="small" />
         {!small && <Title style={{fontSize: '3rem', paddingLeft: '5rem'}}>
-          Pelipäivän infot
+          Marraskuun peli-info
         </Title>}
       </Header>
 )

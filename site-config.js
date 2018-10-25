@@ -8,5 +8,5 @@ module.exports = {
   theme: 'grommet', // dark | hpe | grommet
   font: 'Roboto', // Roboto
   fontHeadings: 'Merriweather', // Merriweather
-  brandColor: '' // #7D4CDB
+  brandColor: 'E13987' 
 }
