@@ -8,8 +8,8 @@ import Login from '../components/login'
 const App = () => (
   <Layout>
     <Router>
-      <PrivateRoute path="/app/" component={Index} />
-      <Login path="/app/login" />
+      <PrivateRoute path="app/" component={Index} />
+      <Login path="app/login" />
     </Router>
   </Layout>
 )

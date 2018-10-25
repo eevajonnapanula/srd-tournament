@@ -1,5 +1,5 @@
 import React from "react"
-import { navigate } from "gatsby"
+import { navigate } from "@reach/router"
 
 import Layout from "../components/layout"
 import Form from 'grommet/components/Form'
@@ -37,7 +37,7 @@ class Login extends React.Component {
     try {
       const res = await handleLogin(this.state)
 
-      !!res ? navigate(`/app/`) : this.showToast()
+      !!res ? navigate(`app/`) : this.showToast()
     } catch (e) {
       console.log('error', e)
     }
@@ -47,7 +47,7 @@ class Login extends React.Component {
 
   render() {
     if (isLoggedIn()) {
-      navigate(`/app/`)
+      navigate(`app/`)
     }
 
     return (
