@@ -12,14 +12,14 @@ import '../scss/main.scss'
 
 // Components
 import Header from './header'
-import Menu from './menu'
 import Footer from './footer'
 
 export default class Layout extends React.Component {
+   state = {}
+
    constructor() {
      super();
      this._onResponsive = this._onResponsive.bind(this);
-     this.state = {};
    }
 
    componentDidMount () {
@@ -39,12 +39,9 @@ export default class Layout extends React.Component {
           <App inline={true}>
             <Box pad="medium" size={{width: "full"}}>
               <Header small={this.state.small} />
-              <Columns maxCount={2} >
-                <Menu direction={this.state.small ? "row" : "column"} />
-                <Box pad="small" size={{width: "full"}}>
+              <Box pad="small" size={{width: "full"}}>
                   {this.props.children}
-                </Box>
-              </Columns>
+              </Box>
             </Box>
             <Footer />
           </App>
