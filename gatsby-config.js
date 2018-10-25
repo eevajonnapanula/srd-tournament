@@ -33,7 +33,7 @@ module.exports = {
       options: {
         name: `SRD`,
         short_name: `SRD`,
-        start_url: `/login`,
+        start_url: `/srd-gameday`,
         background_color: `#ffffff`,
         theme_color: `#663399`,
         display: `minimal-ui`,
