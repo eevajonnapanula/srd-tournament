@@ -11,7 +11,6 @@ export const handleLogin = ({ password }) => {
   if (!isBrowser) return false
 
   if (password === process.env.GATSBY_PASSWORD) {
-    console.log(`Password matches`)
     return setUser({
       loggedIn: true,
     })
