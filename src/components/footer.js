@@ -16,7 +16,7 @@ export default () => (
       responsive={false}
       >
         <OutboundLink href='https://github.com/eevajonnapanula' style={{textDecoration: 'none'}} >
-          <Box direction="row" justify="center" align="center" pad={{between: "small"}}>
+          <Box direction="row" justify="center" align="center" responsive={false} pad={{between: "small"}}>
             <Diamond/>
             <Label>Eevis</Label>
           </Box>

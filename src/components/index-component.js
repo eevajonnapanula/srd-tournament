@@ -11,7 +11,7 @@ import MenuComponent from './menu'
 class IndexComponent extends React.Component {
   state = {
     data: {},
-    selected: 'food',
+    selected: 'schedule',
   }
   constructor() {
     super();

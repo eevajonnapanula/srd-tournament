@@ -7,7 +7,7 @@ export default () => (
   <StaticQuery
     query={graphql`
       query DataQuery {
-        allMarkdownRemark {
+        allMarkdownRemark( sort: {fields: [frontmatter___title], order: ASC}) {
           edges {
             node {
               id
