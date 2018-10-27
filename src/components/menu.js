@@ -1,14 +1,21 @@
 import React from 'react'
 
-import Accordion from 'grommet/components/Accordion';
-import AccordionPanel from 'grommet/components/AccordionPanel';
-
 import Button from 'grommet/components/Button'
 import Box from 'grommet/components/Box'
+import Menu from 'grommet/components/Menu'
+import DownIcon from 'grommet/components/icons/base/Down'
 
-const Menu = (props) => (
-  <Accordion>
-    <AccordionPanel heading='Menu'>
+
+const MenuComponent = (props) => (
+  <Box style={{flexDirection: 'row', flexWrap: "wrap"}} size="full" align="center" >
+    <Menu
+      direction='row'
+      icon={props.small ? <DownIcon /> : false}
+      label={props.small ? 'Avaa valikko' : false}
+      fill={true}
+      full="horizontal"
+      align="center"
+      >
       {Object.keys(props.data).map(item => (
         <Box pad="small" size="small" key={item}>
           <Button
@@ -17,10 +24,10 @@ const Menu = (props) => (
             onClick={() => props.handleSelected(item)}
             pad="small"
             size="small" />
-        </Box>
-      ))}
-    </AccordionPanel>
-  </Accordion>
+          </Box>
+        ))}
+    </Menu>
+  </Box>
 )
 
-export default Menu
+export default MenuComponent

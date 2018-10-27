@@ -6,7 +6,7 @@ import Box from 'grommet/components/Box'
 import Responsive from 'grommet/utils/Responsive'
 
 import PageComponent from './page-component'
-import Menu from './menu'
+import MenuComponent from './menu'
 
 class IndexComponent extends React.Component {
   state = {
@@ -49,9 +49,12 @@ class IndexComponent extends React.Component {
   render() {
     return (
     <Box>
-      <Box style={{flexDirection: 'row', flexWrap: "wrap"}} justify="center" full={{horizontal: true}}>
-        <Menu handleSelected={(item) => this.changeSelected(item)} data={this.state.data}/>
-      </Box>
+
+      <MenuComponent
+        handleSelected={(item) => this.changeSelected(item)}
+        data={this.state.data}
+        small={this.state.small}
+      />
       {this.state.data[this.state.selected] && <PageComponent page={this.state.data[this.state.selected]}  />}
     </Box>
   )}
