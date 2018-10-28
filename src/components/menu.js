@@ -7,7 +7,7 @@ import DownIcon from 'grommet/components/icons/base/Down'
 
 
 const MenuComponent = (props) => (
-  <Box style={{flexDirection: 'row', flexWrap: "wrap"}} size="full" align="center" >
+  <Box style={{flexDirection: 'row', flexWrap: "wrap" }} size="full" align="center" justify="around" >
     <Menu
       direction='row'
       icon={props.small ? <DownIcon /> : false}
@@ -15,6 +15,7 @@ const MenuComponent = (props) => (
       fill={true}
       full="horizontal"
       align="center"
+      justify="center"
       >
       {Object.keys(props.data).map(item => (
         <Box pad="small" size="small" key={item}>
