@@ -6,7 +6,7 @@ import Box from 'grommet/components/Box'
 import Paragraph from 'grommet/components/Paragraph'
 import Label from 'grommet/components/Label'
 import Anchor from 'grommet/components/Anchor'
-import Diamond from 'grommet/components/icons/base/Diamond'
+import DeployIcon from 'grommet/components/icons/base/Deploy'
 
 export default () => (
   <Footer justify="center">
@@ -17,7 +17,7 @@ export default () => (
       >
         <OutboundLink href='https://github.com/eevajonnapanula' style={{textDecoration: 'none'}} >
           <Box direction="row" justify="center" align="center" responsive={false} pad={{between: "small"}}>
-            <Diamond/>
+            <DeployIcon colorIndex="brand" />
             <Label>Eevis</Label>
           </Box>
         </OutboundLink>
