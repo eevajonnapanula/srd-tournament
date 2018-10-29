@@ -49,8 +49,7 @@ class IndexComponent extends React.Component {
   render() {
     return (
     <Box>
-
-      <MenuComponent
+        <MenuComponent
         handleSelected={(item) => this.changeSelected(item)}
         data={this.state.data}
         small={this.state.small}
