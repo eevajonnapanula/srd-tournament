@@ -15,6 +15,7 @@ export default () => (
               frontmatter {
                 title
                 key
+                lang
               }
             }
           }
