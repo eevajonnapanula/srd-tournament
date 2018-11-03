@@ -10,7 +10,6 @@ export default (props) => {
       <Animate enter={{"animation": "fade", "duration": 300, "delay": 0}}
         keep={true}>
         <Box pad="medium" justify="center" align="center">
-          <h1>{props.page.title}</h1>
           <div dangerouslySetInnerHTML={{ __html: props.page.html }} />
         </Box>
     </Animate>
