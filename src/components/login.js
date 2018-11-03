@@ -51,9 +51,10 @@ class Login extends React.Component {
 
     return (
         <Box direction="column" align="center" justify="center">
-          {this.state.toast &&
+          {
+            this.state.toast &&
             <Toast status='critical' onClose={() => this.hideToast()}>
-            Kirjautuminen epäonnistui, yritä uudelleen
+              Kirjautuminen epäonnistui, yritä uudelleen
             </Toast>
           }
           <Form compact={true}>
